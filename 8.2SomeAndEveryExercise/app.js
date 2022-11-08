@@ -2,7 +2,7 @@
 
 function hasOddNumber(arr) {
     return arr.some(function(odd){
-        return arr(odd % 2 === 1)
+        return arr(odd % 2 !== 0)
     });
 };
 
