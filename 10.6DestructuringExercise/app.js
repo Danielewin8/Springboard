@@ -1,4 +1,4 @@
-// My answers are commented for problems 1-6, wjat is being returned or printed?
+// My answers are commented for problems 1-6, what is being returned or printed?
 
 // 1. Object Destructuring 1 
 
