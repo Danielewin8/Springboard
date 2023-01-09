@@ -1,0 +1,143 @@
+body {
+    background-color: hsl(30, 38%, 92%);
+    min-height: 100vh;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+}
+
+#wrapper {
+    background-color: rgb(241, 242, 245);
+    border-radius: 1em;
+    width: 35em;
+    height: 50em;
+    border-style: groove;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: relative;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 3em;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+    text-decoration: underline;
+}
+
+#from-label {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    right: 350px;
+    bottom: 35px;
+    font-size: 1.6em;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+#to-label {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    bottom: 90px;
+    left: 170px;
+    font-size: 1.6em;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+#amount-label {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    right: 210px;
+    font-size: 1.6em;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.material-symbols-outlined {
+    position: relative;
+    top: 57px;
+}
+
+form {
+    text-align: center;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+}
+
+#convert-from {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    float: left;
+    left: 10px;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    padding: 0 15px;
+    border: 1px solid #999;
+}
+
+#convert-to {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    float: right;
+    right: 10px;
+    bottom: 54.5px;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    padding: 0 15px;
+    border: 1px solid #999;
+}
+
+#amount {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    width: 500px;
+    height: 50px;
+    font-size: 20px;
+    padding: 0 15px;
+    border: 1px solid #999;
+}
+
+#convert-button {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    top: 15px;
+    width: 150px;
+    height: 40px;
+    border: solid black;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    background: #675AFE;
+    transition: 0.3s ease;
+}
+
+#errors {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    height: 50px;
+    font-size: 20px;
+    padding: 0 15px;
+    color: #D8000C;
+}
+
+#final-result {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 3em;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+#back-button {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    top: 15px;
+    width: 150px;
+    height: 40px;
+    color: #fff;
+    border: solid black;
+    font-size: 20px;
+    cursor: pointer;
+    background: #675AFE;
+    transition: 0.3s ease;
+}
