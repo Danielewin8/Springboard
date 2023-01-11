@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+
+    {% block content %}
+    <h3 id="final-result">Your result is {{output_code}}{{rounded}}</h1>
+        <a href="/">
+            <form action="/">
+                 <input class="btn" type="button" id="back-button" value="Back"/>
+            </form>
+        </a>
+    {% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+    {% block content %}
+    <section id="errors">
+    {% for msg in get_flashed_messages() %}
+        <p>{{ msg }}</p>
+    {% endfor %}
+    </section>  
+        <form action="/result" id="form" method="POST">
+            <span class="material-symbols-outlined">
+                sync_alt
+            </span>  
+            <p>
+                <label for="convert-from" id="from-label">From</label>
+                <input type="text" id="convert-from" name="convert-from" placeholder="Enter currency">
+            </p>
+            <p>
+                <label for="convert-to" id="to-label">To</label>
+                <input type="text" id="convert-to" name="convert-to" placeholder="Enter currency">
+            </p>
+            <p>
+                <label for="amount" id="amount-label">Amount</label>
+                <input type="text" id="amount" name="amount" placeholder="Enter amount to convert">
+            </p>
+            <button id="convert-button">Convert</button>
+        </form>
+    {% endblock %}    
