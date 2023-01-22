@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% if user.image_url %}
+        <div>
+            <img class="profile-pic" src="{{ user.image_url }}" width="200" height="200">
+        </div>
+    {% endif %}
+    <h1 class="username">{{user.first_name}} {{user.last_name}}</h1>
+    
+    <form action="/users/{{user.id}}/edit" method="GET">
+        <button class="btn-three" type="submit">Edit User</button>
+    </form>
+
+    <form action="/users/{{user.id}}/delete" method="POST">
+        <button class="btn-four" type="submit">Delete User</button>
+    </form>
+{% endblock %}
