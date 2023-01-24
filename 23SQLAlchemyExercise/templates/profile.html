@@ -7,11 +7,26 @@
     {% endif %}
     <h1 class="username">{{user.first_name}} {{user.last_name}}</h1>
     
+    <h3 class="posts-header">Posts:</h3>
+    <ul class="post-list">
+        {% for post in user.posts %}
+        <li>
+            <a href="/posts/{{post.id}}">{{post.title}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    
+    <form action="/users/{{user.id}}/post" method="GET">
+        <button class="create-post-btn" type="submit">Create Post</button>
+    </form>
+
     <form action="/users/{{user.id}}/edit" method="GET">
-        <button class="btn-three" type="submit">Edit User</button>
+        <button class="edit-user-btn" type="submit">Edit User</button>
     </form>
 
     <form action="/users/{{user.id}}/delete" method="POST">
-        <button class="btn-four" type="submit">Delete User</button>
+        <button class="delete-user-btn" type="submit">Delete User</button>
     </form>
+
+    <a href="/users" class="back-btn">Go back</a>
 {% endblock %}
