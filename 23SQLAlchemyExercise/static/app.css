@@ -18,6 +18,38 @@ h1 {
     left: 215px;
 }
 
+.tag-title {
+    font-family: 'Roboto', sans-serif;
+    color: #161414;
+    font-size: 40px;
+}
+
+.a-tags {
+    position: absolute;
+    top: 80px;
+    left: 425px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+.post-tags {
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+    top: 200px;
+}
+
+.tag-selection {
+    position: relative;
+    top: 200px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.tag-header {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    top: 20px;
+}
+
 .posts-header {
     position: relative;
     font-family: 'Roboto', sans-serif;
@@ -142,6 +174,20 @@ h1 {
     min-height: 25px; 
 }
 
+.delete-tag-btn {
+    position: absolute;
+    left: 60px;
+    top: 110px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(204, 12, 12);
+    box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 12%) 0px 1px 1px 0px, rgb(84 105 212) 0px 0px 0px 1px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 8%) 0px 2px 5px 0px;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 4px 8px;
+    min-height: 25px;
+}
 
 .delete-post-btn {
     position: absolute;
@@ -190,8 +236,8 @@ h1 {
 }
 
 .cancel-post {
-    position: relative;
-    top: 250px;
+    position: absolute;
+    top: 340px;
     left: 70px;
     font-family: 'Poppins', sans-serif;
     cursor: pointer;
@@ -199,7 +245,7 @@ h1 {
     background-color: rgb(204, 12, 12);
     box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 12%) 0px 1px 1px 0px, rgb(84 105 212) 0px 0px 0px 1px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 8%) 0px 2px 5px 0px;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 15px;
     padding: 3px 6px;
     min-height: 25px;
     text-decoration: none;
@@ -207,7 +253,7 @@ h1 {
 
 .submit-post-btn {
     position: absolute;
-    top: 280px;
+    top: 340px;
     font-family: 'Poppins', sans-serif;
     cursor: pointer;
     color: white;
@@ -329,4 +375,62 @@ h1 {
     left: 20px;
     max-width: fit-content;
     position: relative;
+}
+
+#tag_name {
+    position: absolute;
+    top: 60px;
+    text-align: left;
+    padding: 6px 12px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 2px solid #a0a5aa;
+    appearance: none;
+    border-radius: 4px;
+}
+
+.add-tag-btn {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    top: 7.5px;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(84, 105, 212);
+    box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 12%) 0px 1px 1px 0px, rgb(84 105 212) 0px 0px 0px 1px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 8%) 0px 2px 5px 0px;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 4px 8px;
+    min-height: 25px;
+}
+
+.submit-tag-btn {
+    position: absolute;
+    top: 110px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(84, 105, 212);
+    box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 12%) 0px 1px 1px 0px, rgb(84 105 212) 0px 0px 0px 1px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 8%) 0px 2px 5px 0px;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 4px 8px;
+    min-height: 25px;
+}
+
+.edit-tag-btn {
+    position: absolute;
+    top: 110px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(84, 105, 212);
+    box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 12%) 0px 1px 1px 0px, rgb(84 105 212) 0px 0px 0px 1px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 8%) 0px 2px 5px 0px;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 4px 8px;
+    min-height: 25px;
 }

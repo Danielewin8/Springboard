@@ -26,7 +26,21 @@ class Posts(db.Model):
     created_at = db.Column(db.DateTime, nullable=False, default = datetime.datetime.now)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
 
+class Tag(db.Model):
+    """Model for tags"""
+    __tablename__ = "tags"
 
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.Text, nullable=False, unique=True)
+
+    posts = db.relationship('Posts', secondary='post_tags', backref='tags')
+
+class PostTag(db.Model):
+    """Model for joining Post and Tag"""
+    __tablename__ = "post_tags"
+
+    post_id = db.Column(db.Integer, db.ForeignKey('posts.id'), primary_key=True)
+    tag_id = db.Column(db.Integer, db.ForeignKey('tags.id'), primary_key=True)
 
 def connect_db(app):
     db.app = app
