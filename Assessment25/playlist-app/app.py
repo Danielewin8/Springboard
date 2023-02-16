@@ -131,15 +131,14 @@ def add_song_to_playlist(playlist_id):
 
     # Restrict form to songs not already on this playlist
 
-    # curr_on_playlist = [s.id for s in playlist.songs]
+    curr_on_playlist = [s.id for s in playlist.songs]
     # form.song.choices = (db.session.query(Song.id, Song.title).filter(Song.id.notin_(curr_on_playlist)).all())
-
-    # Have issues with lines 134 and 135. I can get the select form to appear without them, but am having trouble importing song data from the db as choices in the form. I believe I am missing something.
+    form.song.choices = [(s.id, s.title) for s in Song.query.filter(Song.id.notin_(curr_on_playlist)).all()]
 
     if form.validate_on_submit():
 
           # ADD THE NECESSARY CODE HERE FOR THIS ROUTE TO WORK
-        playlist_song = PlaylistSong(song_id=form.song.data,playlist_id=playlist_id)
+        playlist_song = PlaylistSong(song_id=form.song.data, playlist_id=playlist_id)
         db.session.add(playlist_song)
         db.session.commit()
           

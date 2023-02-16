@@ -13,6 +13,8 @@ class Playlist(db.Model):
     name = db.Column(db.Text, nullable=False)
     description = db.Column(db.String(50))
 
+    songs = db.relationship('Song', secondary='playlist_songs', backref='playlists')
+
 class Song(db.Model):
     """Song."""
     __tablename__ = "songs"
@@ -21,7 +23,7 @@ class Song(db.Model):
     title = db.Column(db.Text, nullable=False)
     artist = db.Column(db.Text, nullable=False)
 
-    playlists = db.relationship('Playlist', secondary='playlist_songs', backref='songs')
+    # playlists = db.relationship('Playlist', secondary='playlist_songs', backref='songs')
 
 class PlaylistSong(db.Model):
     """Mapping of a playlist to a song."""
