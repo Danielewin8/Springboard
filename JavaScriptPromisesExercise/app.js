@@ -1,32 +1,32 @@
 // PART 1
 
-// let numberURL = "http://numbersapi.com";
-// let fav = 8;
+let numberURL = "http://numbersapi.com";
+let fav = 8;
 
 // 1. Get a fact about your favorite number
-// $.getJSON(`${numberURL}/${fav}?json`)
-//     .then(result => {
-//         console.log(result.text);
-//     })
+$.getJSON(`${numberURL}/${fav}?json`)
+    .then(result => {
+        console.log(result.text);
+    })
 
 // 2. Get a fact about multiple numbers
-// $.getJSON(`${numberURL}/1..3,10?json`)
-//     .then(result => {
-//         console.log(result);
-//     })
+$.getJSON(`${numberURL}/1..3,10?json`)
+    .then(result => {
+        console.log(result);
+    })
 
 // 3. Get 4 facts on your favorite number
-// let fourFacts = [];
-// for (let i = 1; i < 5; i++) {
-//     fourFacts.push(
-//         $.getJSON(`${numberURL}/${fav}?json`)
-//     );
-// }
-// Promise.all(fourFacts)
-//     .then(factsArr => (
-//         factsArr.forEach(n => console.log(n.text))
-//     ))
-//     .catch(error => console.log(error));
+let fourFacts = [];
+for (let i = 1; i < 5; i++) {
+    fourFacts.push(
+        $.getJSON(`${numberURL}/${fav}?json`)
+    );
+}
+Promise.all(fourFacts)
+    .then(factsArr => (
+        factsArr.forEach(n => console.log(n.text))
+    ))
+    .catch(error => console.log(error));
 
 // PART 2
 let cardURL = "https://deckofcardsapi.com/api/deck"
