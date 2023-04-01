@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="static/app.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <title>Cupcakes</title>
+</head>
+
+<body>
+  <h1 class="display-3">Cupcakes!</h1>
+  <ul class="list-group d-inline-block" id="cupcake-list">
+    {% for cupcake in cupcakes %}
+    <li class="list-group-item h5">{{cupcake.flavor}} - {{cupcake.size}} - {{cupcake.rating}}
+        <img class="cupcake-image" src="{{cupcake.image}}" alt="(No image)" width="100" height="100">
+        <button class="delete-cupcake btn btn-danger" data-id="{{cupcake.id}}">Delete</button></li>
+    {% endfor %}
+  </ul>
+  <h3 class="display-5">Add new cupcake</h3>
+  <form id="new-cupcake-form">
+    <div class="form-group d-inline-block">
+      <label for="flavor">Flavor</label>
+      <input type="text" class="form-control" id="form-flavor" placeholder="Enter flavor">
+    </div>
+    <div class="form-group d-inline-block">
+        <label for="size">Size</label>
+        <input type="text" class="form-control" id="form-size" placeholder="Enter size">
+    </div>
+    <div class="form-group d-inline-block">
+        <label for="rating">Rating</label>
+        <input type="number" class="form-control" id="form-rating" placeholder="Enter rating">
+    </div>
+    <div class="form-group d-inline-block">
+        <label for="image">Image</label>
+        <input type="text" class="form-control" id="form-image" placeholder="Enter image url">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"
+    integrity="sha256-T/f7Sju1ZfNNfBh7skWn0idlCBcI3RwdLSS4/I7NQKQ=" crossorigin="anonymous"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+  <script src="static/app.js"></script>
+</body>
+
+</html>
