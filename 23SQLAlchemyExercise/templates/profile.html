@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% if user.image_url %}
+        <div>
+            <img class="profile-pic" src="{{ user.image_url }}" width="200" height="200">
+        </div>
+    {% endif %}
+    <h1 class="username">{{user.first_name}} {{user.last_name}}</h1>
+    
+    <h3 class="posts-header">Posts:</h3>
+    <ul class="post-list">
+        {% for post in user.posts %}
+        <li>
+            <a href="/posts/{{post.id}}">{{post.title}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <a class='a-tags' href="/tags">Tags</a>
+    
+    <form action="/users/{{user.id}}/post" method="GET">
+        <button class="create-post-btn" type="submit">Create Post</button>
+    </form>
+
+    <form action="/users/{{user.id}}/edit" method="GET">
+        <button class="edit-user-btn" type="submit">Edit User</button>
+    </form>
+
+    <form action="/users/{{user.id}}/delete" method="POST">
+        <button class="delete-user-btn" type="submit">Delete User</button>
+    </form>
+
+    <a href="/users" class="back-btn">Go back</a>
+{% endblock %}
