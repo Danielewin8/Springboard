@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h1 id="pet-title" class="display-2">{{ pet.name }}</h1>
+    {% if pet.photo_url %}
+    <img id="profile-pic" class="rounded border border-2 border-dark rounded-2" src="{{ pet.photo_url }}" width="300"
+        height="300">
+    {% endif %}
+    <ul id="info">
+        <li>Species: {{pet.species}}</li>
+        <li>Age: {{pet.age}}</li>
+        <li>Notes: {{pet.notes}}</li>
+    </ul>
+    <a class="btn btn-success" href="/pets/{{pet.id}}/edit">Edit</a>
+</div>
+
+{% endblock %}

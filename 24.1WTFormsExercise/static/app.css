@@ -1,0 +1,33 @@
+body {
+    background-image: linear-gradient(to right, #DECBA4, #c7ceaa) !important;
+}
+
+#title {
+    font-family: 'Roboto', sans-serif;
+}
+
+#pet-title {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 5px;
+}
+
+#info {
+    position: relative;
+    font-size: 25px;
+    margin-left: 2px;
+}
+
+#profile-pic {
+    position: relative;
+}
+
+#new-pet-button {
+    position: relative;
+    right: 50px;
+}
+
+#form-buttons {
+    position: relative;
+    top: 10px;
+}
