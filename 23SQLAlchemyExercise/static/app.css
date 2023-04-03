@@ -1,0 +1,436 @@
+h1 {
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    display: flex;
+    text-align: center;
+    font-size: 40px;
+    color: #161414;
+    margin-bottom: -40px;
+    bottom: 20px;
+}
+
+.username {
+    text-decoration: underline;
+    font-family: 'Roboto', sans-serif;
+    color: #161414;
+    font-size: 40px;
+    bottom: 230px;
+    left: 215px;
+}
+
+.tag-title {
+    font-family: 'Roboto', sans-serif;
+    color: #161414;
+    font-size: 40px;
+}
+
+.a-tags {
+    position: absolute;
+    top: 80px;
+    left: 425px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+.post-tags {
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+    top: 200px;
+}
+
+.tag-selection {
+    position: relative;
+    top: 200px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.tag-header {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    top: 20px;
+}
+
+.posts-header {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    color: #161414;
+    font-size: 30px;
+    bottom: 210px;
+    left: 215px;
+}
+
+.user-list {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    position: relative;
+    top: 5px;
+}
+
+.profile-pic {
+    position: relative;
+    border: solid black;
+    border-radius: 4px;
+}
+
+.back-btn {
+    position: absolute;
+    top: 270px;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(12, 1, 1);
+    box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 12%) 0px 1px 1px 0px, rgb(84 105 212) 0px 0px 0px 1px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 8%) 0px 2px 5px 0px;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 1px 6px;
+    min-height: 25px;
+    text-decoration: none;
+}
+
+.back-btn-2 {
+        position: relative;
+        top: 40px;
+        align-items: center;
+        font-family: 'Poppins', sans-serif;
+        cursor: pointer;
+        color: white;
+        background-color: rgb(12, 1, 1);
+        box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 12%) 0px 1px 1px 0px, rgb(84 105 212) 0px 0px 0px 1px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 8%) 0px 2px 5px 0px;
+        border-radius: 5px;
+        font-size: 14px;
+        padding: 3px 6px;
+        min-height: 25px;
+        text-decoration: none;
+}
+
+.add-user-btn {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    top: 7.5px;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(84, 105, 212);
+    box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 12%) 0px 1px 1px 0px, rgb(84 105 212) 0px 0px 0px 1px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 8%) 0px 2px 5px 0px;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 4px 8px;
+    min-height: 25px;
+}
+
+.submit-new-btn {
+    position: absolute;
+    top: 210px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(84, 105, 212);
+    box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 12%) 0px 1px 1px 0px, rgb(84 105 212) 0px 0px 0px 1px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 8%) 0px 2px 5px 0px;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 4px 8px;
+    min-height: 25px;
+}
+
+.edit-submit-btn {
+    position: absolute;
+    top: 210px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(84, 105, 212);
+    box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 12%) 0px 1px 1px 0px, rgb(84 105 212) 0px 0px 0px 1px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 8%) 0px 2px 5px 0px;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 4px 8px;
+    min-height: 25px;
+}
+
+.edit-user-btn {
+    position: absolute;
+    top: 230px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(84, 105, 212);
+    box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 12%) 0px 1px 1px 0px, rgb(84 105 212) 0px 0px 0px 1px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 8%) 0px 2px 5px 0px;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 4px 8px;
+    min-height: 25px;
+}
+
+.edit-post-btn {
+    position: absolute;
+    top: 140px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(84, 105, 212);
+    box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 12%) 0px 1px 1px 0px, rgb(84 105 212) 0px 0px 0px 1px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 8%) 0px 2px 5px 0px;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 4px 8px;
+    min-height: 25px; 
+}
+
+.delete-tag-btn {
+    position: absolute;
+    left: 60px;
+    top: 110px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(204, 12, 12);
+    box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 12%) 0px 1px 1px 0px, rgb(84 105 212) 0px 0px 0px 1px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 8%) 0px 2px 5px 0px;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 4px 8px;
+    min-height: 25px;
+}
+
+.delete-post-btn {
+    position: absolute;
+    left: 60px;
+    top: 140px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(204, 12, 12);
+    box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 12%) 0px 1px 1px 0px, rgb(84 105 212) 0px 0px 0px 1px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 8%) 0px 2px 5px 0px;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 4px 8px;
+    min-height: 25px;
+}
+
+.delete-user-btn {
+    position: absolute;
+    left: 100px;
+    top: 230px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(204, 12, 12);
+    box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 12%) 0px 1px 1px 0px, rgb(84 105 212) 0px 0px 0px 1px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 8%) 0px 2px 5px 0px;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 4px 8px;
+    min-height: 25px;
+}
+
+.cancel-edit {
+    position: relative;
+    top: 180px;
+    left: 70px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(204, 12, 12);
+    box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 12%) 0px 1px 1px 0px, rgb(84 105 212) 0px 0px 0px 1px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 8%) 0px 2px 5px 0px;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 3px 6px;
+    min-height: 25px;
+    text-decoration: none;
+}
+
+.cancel-post {
+    position: absolute;
+    top: 340px;
+    left: 70px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(204, 12, 12);
+    box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 12%) 0px 1px 1px 0px, rgb(84 105 212) 0px 0px 0px 1px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 8%) 0px 2px 5px 0px;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 3px 6px;
+    min-height: 25px;
+    text-decoration: none;
+}
+
+.submit-post-btn {
+    position: absolute;
+    top: 340px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(84, 105, 212);
+    box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 12%) 0px 1px 1px 0px, rgb(84 105 212) 0px 0px 0px 1px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 8%) 0px 2px 5px 0px;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 4px 8px;
+    min-height: 25px;
+}
+
+#first_name {
+    position: absolute;
+    top: 60px;
+    text-align: left;
+    padding: 6px 12px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 2px solid #a0a5aa;
+    appearance: none;
+    border-radius: 4px;
+}
+
+#last_name {
+    position: absolute;
+    top: 110px;
+    align-items: left;
+    padding: 6px 12px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 2px solid #a0a5aa;;
+    appearance: none;
+    border-radius: 4px;
+}
+
+#image_url {
+    position: absolute;
+    top: 160px;
+    padding: 6px 12px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 2px solid #a0a5aa;
+    appearance: none;
+    border-radius: 4px;
+}
+
+.create-post-btn{
+    position: absolute;
+    top: 75px;
+    left: 315px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(84, 105, 212);
+    box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 12%) 0px 1px 1px 0px, rgb(84 105 212) 0px 0px 0px 1px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 8%) 0px 2px 5px 0px;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 4px 8px;
+    min-height: 25px;
+}
+
+#post_title {
+    position: absolute;
+    top: 60px;
+    text-align: left;
+    padding: 6px 12px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 2px solid #a0a5aa;
+    appearance: none;
+    border-radius: 4px;
+}
+
+#post_content {
+    position: absolute;
+    height: 150px;
+    width: 250px;
+    top: 110px;
+    padding: 6px 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 2px solid #a0a5aa;
+    appearance: none;
+    border-radius: 4px;
+}
+
+.post-list {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    position: relative;
+    bottom: 235px;
+    left: 200px;
+}
+
+.post-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    left: 20px;
+    max-width: fit-content;
+    position: relative;
+}
+
+#tag_name {
+    position: absolute;
+    top: 60px;
+    text-align: left;
+    padding: 6px 12px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 2px solid #a0a5aa;
+    appearance: none;
+    border-radius: 4px;
+}
+
+.add-tag-btn {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    top: 7.5px;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(84, 105, 212);
+    box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 12%) 0px 1px 1px 0px, rgb(84 105 212) 0px 0px 0px 1px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 8%) 0px 2px 5px 0px;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 4px 8px;
+    min-height: 25px;
+}
+
+.submit-tag-btn {
+    position: absolute;
+    top: 110px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(84, 105, 212);
+    box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 12%) 0px 1px 1px 0px, rgb(84 105 212) 0px 0px 0px 1px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 8%) 0px 2px 5px 0px;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 4px 8px;
+    min-height: 25px;
+}
+
+.edit-tag-btn {
+    position: absolute;
+    top: 110px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(84, 105, 212);
+    box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 12%) 0px 1px 1px 0px, rgb(84 105 212) 0px 0px 0px 1px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 8%) 0px 2px 5px 0px;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 4px 8px;
+    min-height: 25px;
+}
