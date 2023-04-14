@@ -5,6 +5,7 @@ const router = express.Router();
 const db = require("../db");
 const app = require("../app");
 const ExpressError = require("../expressError");
+const slugify = require("slugify");
 
 // Returns list of companies.
 router.get('/', async (req, res, next) => {
@@ -42,7 +43,9 @@ router.get('/:code', async (req, res, next) => {
 router.post('/', async (req, res, next) => {
     try {
         const { name, description } = req.body;
-        const results = await db.query('INSERT INTO companies (name, description) VALUES ($1, $2) RETURNING name, description', [name, description]);
+        let code = slugify(name, {lower:true});
+
+        const results = await db.query('INSERT INTO companies (code,name, description) VALUES ($1, $2, $3) RETURNING code, name, description', [code, name, description]);
         return res.status(201).json({
             "company": results.rows[0]
         })
@@ -70,7 +73,7 @@ router.put('/:code', async (req, res, next) => {
 router.delete('/:code', async (req, res, next) => {
     try {
         const { code } = req.params;
-        const results = await db.query('DELETE FROM companies WHERE code = $1', [code]);
+        const results = await db.query('DELETE FROM companies WHERE code = $1 RETURNING code', [code]);
         if (results.rows.length === 0) {
             throw new ExpressError(`Cannot find company with code of ${code}`, 404)
         }
