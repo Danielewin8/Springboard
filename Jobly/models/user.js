@@ -198,11 +198,41 @@ class User {
            FROM users
            WHERE username = $1
            RETURNING username`,
-        [username],
+        [username]
     );
     const user = result.rows[0];
 
     if (!user) throw new NotFoundError(`No user: ${username}`);
+  }
+
+  /** Method for applying for a job */
+  
+  static async apply(username, jobId) {
+    const query = await db.query(
+          `SELECT id
+          FROM jobs
+          WHERE id = $1`,
+        [jobId]
+    );
+    const job = query.rows[0]
+
+    if (!job) throw new NotFoundError(`${jobId} does not exist`)
+
+    const query2 = await db.query(
+          `SELECT username
+          FROM users
+          WHERE username = $1`,
+        [username]
+    );
+    const user = query2.rows[0];
+
+    if (!user) throw new NotFoundError(`${username} does not exist`)
+
+    await db.query(
+          `INSERT INTO applications (job_id, username)
+          VALUES ($1, $2)`,
+        [jobId, username]
+    );
   }
 }
 
