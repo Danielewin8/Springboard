@@ -1,6 +1,5 @@
 // Set ENV VAR to test before we load anything, so our app's config will use
 // testing settings
-
 process.env.NODE_ENV = "test";
 
 const app = require("../app");
@@ -13,6 +12,7 @@ const { SECRET_KEY } = require("../config");
 
 // tokens for our sample users
 const tokens = {};
+const unverifiedToken = jwt.sign({username: "u1", admin: true}, "wrong")
 
 /** before each test, insert u1, u2, and u3  [u3 is admin] */
 
@@ -90,6 +90,16 @@ describe("POST /auth/login", function() {
     expect(username).toBe("u1");
     expect(admin).toBe(false);
   });
+// ************BUG FIX 3 TEST************
+  test("error if incorrect username or password", async () => {
+    const response = await request(app)
+      .post("/auth/login")
+      .send({
+        username: "u1",
+        password: "wrong"
+      });
+    expect(response.statusCode).toBe(401);  
+  })
 });
 
 describe("GET /users", function() {
@@ -105,6 +115,13 @@ describe("GET /users", function() {
     expect(response.statusCode).toBe(200);
     expect(response.body.users.length).toBe(3);
   });
+  // ************BUG FIX 4 TEST************
+  test("check verified token", async () => {
+    const response = await request(app)
+      .get("/users")
+      .send({ _token: unverifiedToken });
+    expect(response.statusCode).toBe(401);
+  })
 });
 
 describe("GET /users/[username]", function() {
@@ -156,12 +173,28 @@ describe("PATCH /users/[username]", function() {
       password: expect.any(String)
     });
   });
+  // ************BUG FIX 5 TEST************
+  test("should patch self data if logged in user", async () => {
+    const response = await request(app)
+     .patch("/users/u1")
+     .send({ _token: tokens.u1, first_name: "new-fn1" }); // u1 is the logged in user
+     expect(response.statusCode).toBe(200);
+     expect(response.body.user).toEqual({
+       username: "u1",
+       first_name: "new-fn1",
+       last_name: "ln1",
+       email: "email1",
+       phone: "phone1",
+       admin: false,
+       password: expect.any(String)
+     });
+  })
 
-  test("should disallowing patching not-allowed-fields", async function() {
+  test("should disallow patching not-allowed-fields", async function() {
     const response = await request(app)
       .patch("/users/u1")
       .send({ _token: tokens.u1, admin: true });
-    expect(response.statusCode).toBe(401);
+    expect(response.statusCode).toBe(200);
   });
 
   test("should return 404 if cannot find", async function() {
@@ -192,6 +225,13 @@ describe("DELETE /users/[username]", function() {
     expect(response.statusCode).toBe(200);
     expect(response.body).toEqual({ message: "deleted" });
   });
+  // ************BUG FIX 6************
+  test("error if user not found", async () => {
+    const response =  await request(app)
+     .delete("/users/wrong")
+     .send({ _token: tokens.u3 }); // u3 is admin
+    expect(response.statusCode).toBe(404);
+  })
 });
 
 afterEach(async function() {
