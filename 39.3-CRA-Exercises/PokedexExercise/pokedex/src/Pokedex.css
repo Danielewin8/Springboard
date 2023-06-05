@@ -1,0 +1,12 @@
+.PokeDex {
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+.PokeDex-cards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  
