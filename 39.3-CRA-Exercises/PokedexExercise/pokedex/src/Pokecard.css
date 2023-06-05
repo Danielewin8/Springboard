@@ -1,0 +1,36 @@
+.PokeCard {
+    display: inline-block;
+    width: 150px;
+    height: 200px;
+    background-color: gainsboro;
+    border-radius: 10px;
+    text-align: center;
+    padding: 3em;
+    margin: 3em;
+  }
+
+
+.PokeCard-data {
+    position: relative;
+    bottom: 20px;
+    justify-content: center;
+}
+
+.PokeCard-name {
+    position: relative;
+    color: blueviolet;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 1px;
+    justify-content: center;
+  }
+
+.PokeCard-img {
+    width: 150px;
+}
+  
+.PokeCard-data {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
