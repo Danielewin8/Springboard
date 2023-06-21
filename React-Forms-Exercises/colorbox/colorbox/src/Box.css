@@ -1,0 +1,17 @@
+h1 {
+    text-align: center;
+}
+
+.box-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.box {
+    margin: 10px;
+}
+
+.delete-btn {
+    display: flex;
+    flex-direction: row;
+}
