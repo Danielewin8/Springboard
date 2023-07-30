@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@500&display=swap');
+
+body {
+  background-color: lightcyan;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  padding: 10px;
+}
